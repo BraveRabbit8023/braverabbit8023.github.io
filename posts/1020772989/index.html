@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="勇敢兔兔">
+    
+    <title>
+        
+            原来你的 C 盘也……红温了？ |
+        
+        Brave Rabbit
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="https://pic.imgdb.cn/item/66496fafd9c307b7e9b76f0e.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/font/css/brands.min.css">
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"www.notes.worstone.cn","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Brave Rabbit","author":"勇敢兔兔","avatar":"/images/CT_Rabbot.png","logo":"/images/Rabbitshop.png","favicon":"https://pic.imgdb.cn/item/66496fafd9c307b7e9b76f0e.png"},"menu":{"首页":"/","标签":"/tags","分类":"/categories","关于":"/about"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg2.svg","description":"头顶月 || 眼中你","hitokoto":false},"social_contact":{"enable":true,"links":{"github":"https://github.com/BraveRabbit8023","weixin":"img | /images/wx_qr.jpg","qq":"img | /images/qq_qr.jpg","steam":"https://steamcommunity.com/id/potatobea/"}},"scroll":{"progress_bar":true,"percent":false,"hide_header":true},"home":{"announcement":"嵌入了评论区功能，大家可以留言或者讨论了！","category":false,"tag":false,"post_datetime":"updated || fa-regular fa-clock"},"post":{"author_badge":{"enable":false,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD","copyright_info":false,"share":true,"reward":{"enable":true,"img_link":"/images/rewards.jpg","text":"¥ 投喂兔兔 ¥"}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":false,"site_pv":false,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":true,"use":"twikoo","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":"https://rabbittwikoo.netlify.app/.netlify/functions/twikoo","region":null,"version":"1.6.34"},"waline":{"server_url":"https://my-waline-77qglmsjx-braverabbit8023s-projects.vercel.app/","reaction":false,"version":2,"options":null},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":2024,"word_count":true,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":true,"provider":"github","url":"https://github.com"},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.1.0"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/Rabbitshop.png">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               Brave Rabbit
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                
+                                标签
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分类
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags"
+                    >标签</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about"
+                    >关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        原来你的 C 盘也……红温了？
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/CT_Rabbot.png">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">勇敢兔兔</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-05-22</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Sat May 25 2024 08:21:14 GMT+0000">2024-05-25</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/C%E7%9B%98/">C盘</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E4%BD%BF%E7%94%A8%E4%B9%A0%E6%83%AF/">使用习惯</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>1.9k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>6 分钟</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <p>“什么！！！我的 C 盘又红了？”</p>
+<span id="more"></span>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>某一天，当你打开“我的电脑”，发现一条醒目的红色跃然屏上，那么刺眼、痛心！</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/22/L4SIGq7j.png"
+                        alt="布什戈门"
+                 ></p>
+<p>随着目光继续下移，你的表情逐渐疑惑且凝重，陷入了深深的思考……</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/22/tsPURE8R.png"
+                        alt="em..."
+                 ></p>
+<p>是的没错，剩下几个盘符甚至空的都没有什么蓝色，主打一个陪伴。我们“袓國菗潒哌埖朶”曾有言：</p>
+<blockquote>
+<p>红色是毁灭❤️，蓝色是冷漠💙，白色是虚无🤍……</p>
+</blockquote>
+<p>你甚至一时间都想不出为什么，这电脑后宫佳盘 1 个 T，偏宠 C 妃一人。<br>这时有的同学灵机一动，打开了“XX 电脑管家”-“清理垃圾”，一顿闪烁找到了好几个 G 的垃圾，全部清除后发现任尔风吹浪打， C 盘岿然不动。</p>
+<h2 id="如何拯救你的-C-盘（文末有懒人方法）？"><a href="#如何拯救你的-C-盘（文末有懒人方法）？" class="headerlink" title="如何拯救你的 C 盘（文末有懒人方法）？"></a>如何拯救你的 C 盘（文末有懒人方法）？</h2><p>这里不直接给大家介绍 C 盘的组成部分了，感兴趣的可以自行找科普。我只给大家列出最有可能使 C 盘增长的几个主要元凶：</p>
+<h3 id="放满文件的桌面"><a href="#放满文件的桌面" class="headerlink" title="放满文件的桌面"></a>放满文件的桌面</h3><p>有些同学可能会疑惑：“桌面都不在“计算机 or 我的电脑”里，怎么会占 C 盘空间？”很不幸，桌面本质只是一个视窗，它的实际默认路径是 “C:\Users\你的用户名\Desktop”。仔细想想，你放在桌子上的东西就没有占用你房间的空间吗？</p>
+<p>如果你的桌面只是一些快捷方式（带箭头的小图标），那就算摆满也占不了多少储存空间。但是有的同学会经常把下载的东西、自己的作业、各种素材甚至是软件安装包等直接扔在桌面（我接手过更离谱的还有直接把软件安装目录改成桌面的）。</p>
+<p>不是说桌面不可以放文件，比如我图方便的时候也会在桌面直接新建文件。但是大家不能把所有的东西都一股脑堆在桌面上，比起“储藏室”桌面更适合成为“<strong>中转站</strong>”。</p>
+<h3 id="默认把软件全装在-C-盘"><a href="#默认把软件全装在-C-盘" class="headerlink" title="默认把软件全装在 C 盘"></a>默认把软件全装在 C 盘</h3><p>不是说软件不可以安装在 C 盘，毕竟固态硬盘不分区的话，那就只有一个盘。这里我们讨论的是常见情况都是要分区的，分区一般不会给 C 盘预留太大空间，如果 C 盘持续爆满，剩余空间不足 C 盘的 5%，才会影响运行速度。</p>
+<p>但是毕竟很少有人能看见 C 盘“红温”而不难受（强迫症更得原地升天），所以我们在其他盘符空间充足的情况下尽量还是把软件安装在其他盘比较好。</p>
+<h4 id="安装时更改安装路径"><a href="#安装时更改安装路径" class="headerlink" title="安装时更改安装路径"></a>安装时更改安装路径</h4><p>一般软件安装程序主要有三种情况：</p>
+<ol>
+<li><p>主动显示路径选择界面</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/24/832TWdID.png"
+                        alt="Alist 安装"
+                 ></p>
+</li>
+<li><p>折叠路径选择界面</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/24/1IUbxSYX.png"
+                        alt="飞书安装未展开"
+                 > <img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/24/M9MSsLnu.png"
+                        alt="飞书安装展开"
+                 ></p>
+<blockquote>
+<p>💢 现在很多国产软件都会增加一个“自定义选项”，其实一般就是一个路径选择 + 开机自启，有时候再来一个桌面图标。</p>
+</blockquote>
+</li>
+<li><p>不可修改<br>这种情况并不多见，少数软件必需极好的系统支持或者运行速度，才会默认到 C 盘安装，人家不让改咱也就偶尔允许它安装那么一两次。但是可以更改的<strong>尽量更改</strong>。</p>
+</li>
+</ol>
+<h4 id="已安装软件从-C-盘搬家"><a href="#已安装软件从-C-盘搬家" class="headerlink" title="已安装软件从 C 盘搬家"></a>已安装软件从 C 盘搬家</h4><p>如果我们的很多软件已经安装在 C 盘，但是又不想删除再安装，有没有什么办法呢？当然有：</p>
+<h6 id="系统“设置”自带搬家"><a href="#系统“设置”自带搬家" class="headerlink" title="系统“设置”自带搬家"></a>系统“设置”自带搬家</h6><p>Win + i 打开“设置”<br>应用 - 安装的应用<br>点击选项（三个点）- 移动<br><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/25/eitrryTL.png"
+                        alt="Setting_App"
+                 ></p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/25/xfBfqvfA.png"
+                        alt="Setting_App_Moving"
+                 ></p>
+<blockquote>
+<p>❗ 注意：这种移动方式通常只适用于从 Microsoft Store 安装的软件，我们通过下载安装包进行安装的不在此列。</p>
+</blockquote>
+<h6 id="使用“搬家工具”"><a href="#使用“搬家工具”" class="headerlink" title="使用“搬家工具”"></a>使用“搬家工具”</h6><p>兔兔已知一些电脑管家里会提供这种工具，比如“360 卫士”或者“腾讯电脑管家”，网上也可以找到这些工具的纯净提取版。</p>
+<p>文章末尾会附上下载链接。</p>
+<h3 id="微信-QQ-聊天记录"><a href="#微信-QQ-聊天记录" class="headerlink" title="微信 &amp; QQ 聊天记录"></a>微信 &amp; QQ 聊天记录</h3><p>腾讯旗下两款聊天软件都会默认把聊天记录放到 C 盘目录下，如果没有定期清理的习惯就会积累巨大量的内容。</p>
+<p>其中包括文本聊天、传输的文件、图片、视频、语音甚至是你根本没有点击保存的表情包。</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/25/e8UGYUa9.png"
+                        alt="Wx_Storge"
+                 > <img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/25/CupcDcjn.png"
+                        alt="QQ_Storge"
+                 ></p>
+<p>即使像兔兔这样定期清理，短期内也会迅速积攒很多文件（QQ 基本不用电脑版所以没有什么东西）。</p>
+<p>综上所述，我们的应对方案有二：<br>首先是把微信 &amp; QQ 的聊天记录储存路径更改到其他盘；<br>其次是定期清理。<br>下面只以微信为例进行示范。</p>
+<h4 id="储存路径更改"><a href="#储存路径更改" class="headerlink" title="储存路径更改"></a>储存路径更改</h4><p>说明一下，我苯人是没改过路径的。<br>一个是因为我要经常下载各种软件或者从 Github 拉取一些东西，D、E 两盘满的比 C 盘快；<br>另一个是因为我本身有清理 C 盘的习惯，所以相当于聊天记录根本没在 C 盘存在过，也就没必要转移到其他盘。</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/25/ECpTFsrD.png"
+                       
+                 ></p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/25/NxkQOMD2.png"
+                       
+                 ></p>
+<p>在弹出的资源管理器窗口中选择自己喜欢的位置即可。</p>
+<h4 id="聊天记录清理"><a href="#聊天记录清理" class="headerlink" title="聊天记录清理"></a>聊天记录清理</h4><h5 id="微信自带清理"><a href="#微信自带清理" class="headerlink" title="微信自带清理"></a>微信自带清理</h5><p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/25/0bmzIspw.png"
+                       
+                 ></p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/25/HmATnK0i.png"
+                       
+                 ></p>
+<h5 id="第三方清理工具"><a href="#第三方清理工具" class="headerlink" title="第三方清理工具"></a>第三方清理工具</h5><p>第三方清理工具有很多，很大一部分是集成在“XX 电脑管家 &#x2F; 安全卫士”之中，比如联想、腾讯、360 等。这些工具都提供了很人性化的界面设计和使用逻辑，会按照时间梳理记录，让你有机会删除那些遥远的记忆。</p>
+<p>工具纯净提取版链接附在文末。</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/25/HJ2MAnnC.png"
+                       
+                 ></p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/25/qAkOjfvN.png"
+                       
+                 ></p>
+<h3 id="一些杂项"><a href="#一些杂项" class="headerlink" title="一些杂项"></a>一些杂项</h3><p>电脑使用过程中也会有一些默认的基础行为会把文件存在 C 盘，比如浏览器下载的文件，系统自带的截图功能等。这些一般会默认分类存放在 “C:\Users\你的用户名” 文件夹下，而这几个分类通常也会默认固定在资源管理器的快速访问里，就像这样：</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/25/kwR6Mp45.png"
+                       
+                 ></p>
+<p>此外还有一点是大家容易忽略的，就是“<strong>回收站</strong>”，不是说把东西扔到“回收站”就不会占用空间了。</p>
+<p>回收站类似一个临时文件夹，当你有东西在回收站时，它会生成一个隐藏文件夹来存放这些垃圾，以便你反悔复原。</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img2.imgtp.com/2024/05/25/bcU2nmgK.png"
+                       
+                 ></p>
+<h2 id="清理工具下载"><a href="#清理工具下载" class="headerlink" title="清理工具下载"></a>清理工具下载</h2><p><a class="link"   target="_blank" rel="noopener" href="https://www.123pan.com/s/GCRwjv-9bbCh.html" >360 清理 Pro<i class="fas fa-external-link-alt"></i></a><br><a class="link"   target="_blank" rel="noopener" href="https://www.123pan.com/s/GCRwjv-AbbCh.html" >腾讯电脑管家 - C 盘搬家<i class="fas fa-external-link-alt"></i></a><br><a class="link"   target="_blank" rel="noopener" href="https://github.com/imDema/FreeMove/releases/download/2.1.0/FreeMove.exe" >FreeMove (EN.ver)<i class="fas fa-external-link-alt"></i></a><br><a class="link"   target="_blank" rel="noopener" href="https://diskanalyzer.com/files/wiztree_4_19_setup.exe" >Wiztree<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h2><p>其实到现在这个时间节点，C 盘满与不满更多体现的是一个人的使用习惯而非真正意义上的技术。因为假设一开始就不分盘符，只有一个 C 盘，那也就无所谓了。</p>
+<p>我迄今为止还是会“随意”地存放一些文件，是因为我有<strong>重要文件备份</strong>和<strong>定期清理</strong>的习惯，至于他们放在哪里对我的影响不是很大。而且作为个人用户，也没有什么可以称得上“不可丢失”的文件，有的只是搜寻和创作这些文件的时间成本与精力罢了。</p>
+<p>如果你实在懒得去阅读我的上述内容，懒得自己清理，可以点击下面的微信图标滴滴我<strong>有偿远程</strong>。</p>
+<p>就这样，下个帖子见！</p>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/C%E7%9B%98/">C盘</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E4%BD%BF%E7%94%A8%E4%B9%A0%E6%83%AF/">使用习惯</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+                    <div class="reward-author-container border-box flex-center">
+    <div class="reward-btn keep-button border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="¥ 投喂兔兔 ¥"
+            data-tooltip-img-url="/images/rewards.jpg"
+            data-tooltip-img-trigger="click"
+            data-tooltip-img-style="top: -8px;"
+    >
+        <i class="fa-solid fa-hand-holding-heart"></i>
+    </div>
+</div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/posts/1238435211/"
+                                   title="《数据科学技术与应用》兔兔笔记"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">《数据科学技术与应用》兔兔笔记</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/posts/2947170114/"
+                                   title="打破校园边界，畅享更多可能——珊瑚礁 App 邀你一起开启多元大学生活"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">打破校园边界，畅享更多可能——珊瑚礁 App 邀你一起开启多元大学生活</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;评论
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">评论插件加载失败</span>
+    <button class="reload keep-button">点击重新加载</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">正在加载评论插件</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="twikoo-container">
+        <div id="twikoo-comment"></div>
+        <script data-pjax
+                src="//cdn.jsdelivr.net/npm/twikoo@1.6.34/dist/twikoo.all.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script data-pjax
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initTwikoo = () => {
+            if (window?.twikoo) {
+              twikoo.init({
+                el: '#twikoo-comment',
+                envId: 'https://rabbittwikoo.netlify.app/.netlify/functions/twikoo',
+                region: '',
+                lang: 'zh-CN' || 'zh-CN'
+              })
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initTwikoo()
+              }, 1000)
+            }
+          }
+
+          if ('true' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initTwikoo()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initTwikoo)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%8B%AF%E6%95%91%E4%BD%A0%E7%9A%84-C-%E7%9B%98%EF%BC%88%E6%96%87%E6%9C%AB%E6%9C%89%E6%87%92%E4%BA%BA%E6%96%B9%E6%B3%95%EF%BC%89%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">如何拯救你的 C 盘（文末有懒人方法）？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%BE%E6%BB%A1%E6%96%87%E4%BB%B6%E7%9A%84%E6%A1%8C%E9%9D%A2"><span class="nav-number">2.1.</span> <span class="nav-text">放满文件的桌面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E6%8A%8A%E8%BD%AF%E4%BB%B6%E5%85%A8%E8%A3%85%E5%9C%A8-C-%E7%9B%98"><span class="nav-number">2.2.</span> <span class="nav-text">默认把软件全装在 C 盘</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%97%B6%E6%9B%B4%E6%94%B9%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84"><span class="nav-number">2.2.1.</span> <span class="nav-text">安装时更改安装路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%B2%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E4%BB%8E-C-%E7%9B%98%E6%90%AC%E5%AE%B6"><span class="nav-number">2.2.2.</span> <span class="nav-text">已安装软件从 C 盘搬家</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E2%80%9C%E8%AE%BE%E7%BD%AE%E2%80%9D%E8%87%AA%E5%B8%A6%E6%90%AC%E5%AE%B6"><span class="nav-number">2.2.2.0.1.</span> <span class="nav-text">系统“设置”自带搬家</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E2%80%9C%E6%90%AC%E5%AE%B6%E5%B7%A5%E5%85%B7%E2%80%9D"><span class="nav-number">2.2.2.0.2.</span> <span class="nav-text">使用“搬家工具”</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1-QQ-%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95"><span class="nav-number">2.3.</span> <span class="nav-text">微信 &amp; QQ 聊天记录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%82%A8%E5%AD%98%E8%B7%AF%E5%BE%84%E6%9B%B4%E6%94%B9"><span class="nav-number">2.3.1.</span> <span class="nav-text">储存路径更改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95%E6%B8%85%E7%90%86"><span class="nav-number">2.3.2.</span> <span class="nav-text">聊天记录清理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%B8%A6%E6%B8%85%E7%90%86"><span class="nav-number">2.3.2.1.</span> <span class="nav-text">微信自带清理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E6%B8%85%E7%90%86%E5%B7%A5%E5%85%B7"><span class="nav-number">2.3.2.2.</span> <span class="nav-text">第三方清理工具</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%9D%82%E9%A1%B9"><span class="nav-number">2.4.</span> <span class="nav-text">一些杂项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%85%E7%90%86%E5%B7%A5%E5%85%B7%E4%B8%8B%E8%BD%BD"><span class="nav-number">3.</span> <span class="nav-text">清理工具下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%90%8E%E9%9D%A2"><span class="nav-number">4.</span> <span class="nav-text">写在后面</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2024</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">勇敢兔兔</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+                
+                <div class="deploy-info info-item default">
+                    
+                        <a target="_blank" rel="nofollow" href="https://github.com">
+                    
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                    
+                        </a>
+                    
+                </div>
+            
+        
+
+        <div class="count-item info-item default">
+            
+                <span class="count-box border-box word">
+                    <span class="item-type border-box">总字数</span>
+                    <span class="item-value border-box word">9.2k</span>
+                </span>
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%8B%AF%E6%95%91%E4%BD%A0%E7%9A%84-C-%E7%9B%98%EF%BC%88%E6%96%87%E6%9C%AB%E6%9C%89%E6%87%92%E4%BA%BA%E6%96%B9%E6%B3%95%EF%BC%89%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">如何拯救你的 C 盘（文末有懒人方法）？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%BE%E6%BB%A1%E6%96%87%E4%BB%B6%E7%9A%84%E6%A1%8C%E9%9D%A2"><span class="nav-number">2.1.</span> <span class="nav-text">放满文件的桌面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E6%8A%8A%E8%BD%AF%E4%BB%B6%E5%85%A8%E8%A3%85%E5%9C%A8-C-%E7%9B%98"><span class="nav-number">2.2.</span> <span class="nav-text">默认把软件全装在 C 盘</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%97%B6%E6%9B%B4%E6%94%B9%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84"><span class="nav-number">2.2.1.</span> <span class="nav-text">安装时更改安装路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%B2%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E4%BB%8E-C-%E7%9B%98%E6%90%AC%E5%AE%B6"><span class="nav-number">2.2.2.</span> <span class="nav-text">已安装软件从 C 盘搬家</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E2%80%9C%E8%AE%BE%E7%BD%AE%E2%80%9D%E8%87%AA%E5%B8%A6%E6%90%AC%E5%AE%B6"><span class="nav-number">2.2.2.0.1.</span> <span class="nav-text">系统“设置”自带搬家</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E2%80%9C%E6%90%AC%E5%AE%B6%E5%B7%A5%E5%85%B7%E2%80%9D"><span class="nav-number">2.2.2.0.2.</span> <span class="nav-text">使用“搬家工具”</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1-QQ-%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95"><span class="nav-number">2.3.</span> <span class="nav-text">微信 &amp; QQ 聊天记录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%82%A8%E5%AD%98%E8%B7%AF%E5%BE%84%E6%9B%B4%E6%94%B9"><span class="nav-number">2.3.1.</span> <span class="nav-text">储存路径更改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95%E6%B8%85%E7%90%86"><span class="nav-number">2.3.2.</span> <span class="nav-text">聊天记录清理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%B8%A6%E6%B8%85%E7%90%86"><span class="nav-number">2.3.2.1.</span> <span class="nav-text">微信自带清理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E6%B8%85%E7%90%86%E5%B7%A5%E5%85%B7"><span class="nav-number">2.3.2.2.</span> <span class="nav-text">第三方清理工具</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%9D%82%E9%A1%B9"><span class="nav-number">2.4.</span> <span class="nav-text">一些杂项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%85%E7%90%86%E5%B7%A5%E5%85%B7%E4%B8%8B%E8%BD%BD"><span class="nav-number">3.</span> <span class="nav-text">清理工具下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%90%8E%E9%9D%A2"><span class="nav-number">4.</span> <span class="nav-text">写在后面</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/libs/anime.min.js"></script>
+
+<!-- local-search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/lazyload.min.js"></script>
+
+
+<div class="pjax">
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/post/share.min.js"></script>
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
